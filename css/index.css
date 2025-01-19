@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 86%);
+}
+
+.card-holder {
+  background-color: hsl(0, 0%, 100%);
+  padding: 50px;
+  border-radius: 15px 15px 100px 15px;
+  width: auto;
+  max-width: 575px;
+  margin: 115px auto 25px;
+}
+
+.input-part {
+  display: inline-block;
+}
+
+label {
+  display: block;
+  width: fit-content;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: hsl(0, 1%, 44%);
+}
+
+.card-input input::placeholder {
+  color: hsl(0, 1%, 44%) !important;
+}
+
+.card-input input:focus {
+  box-shadow: none;
+  border-color: hsl(259, 100%, 65%);
+}
+
+.card-input input {
+  display: inline;
+  width: fit-content;
+  max-width: 115px;
+  font-size: 24px;
+  margin-right: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card-input input::-webkit-outer-spin-button,
+.card-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.button-holder {
+  position: relative;
+}
+
+div.show-result {
+  display: flex;
+  background-color: hsl(259, 100%, 65%);
+  color: hsl(0, 0%, 100%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 0 0 0 auto;
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  height: 2px;
+  background-color: hsl(0, 0%, 86%);
+  width: 100%;
+  position: absolute;
+  bottom: 35px;
+  right: 0px;
+  z-index: 5;
+}
+
+div.show-result:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.card-output h1 {
+  width: fit-content;
+  font-size: 46px;
+  font-weight: bold;
+  color: hsl(0, 0%, 8%);
+}
+
+.card-output h1 span {
+  color: hsl(259, 100%, 65%);
+}
+
+.attribution {
+  width: max-content;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 767px) {
+  .line {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .card-holder {
+    margin: 50px auto 25px;
+    width: fit-content;
+  }
+  .card-input input {
+    max-width: 75px;
+    font-size: 18px;
+  }
+  div.btn.show-result {
+    margin: 50px auto;
+  }
+  .line {
+    width: 100%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
