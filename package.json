@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@form-validation/validator-date": "^2.4.0",
+    "validate-date": "^2.1.0"
+  }
+}

@@ -23,39 +23,48 @@
     <div class="container">
       <div class="card-holder">
         <div class="card-input">
-          <form>
+          <form id="input-form" class="d-flex">
 
             <div class="input-part">
               <label for="day">DAY</label>
-              <input type="number" name="day" id="day" class="form-control" placeholder="DD">
-              <div class="error-message d-none">
-                Please enter a valid day.
+              <input type="datetime" name="day" id="day" class="form-control" placeholder="DD">
+              <div class="error-msg error-msg-style">
+
+              </div>
+              <div id="val-error-day" class="error-msg-style">
+                Must be a valid day
               </div>
             </div>
 
-            <div class="input-part">
+            <div class="input-part ms-1">
               <label for="month">MONTH</label>
               <input type="number" name="month" id="month" class="form-control" placeholder="MM">
-              <div class="error-message d-none">
-                Please enter a valid month.
+              <div class="error-msg error-msg-style">
+
+              </div>
+              <div id="val-error-month" class="error-msg-style">
+                Must be a valid month
               </div>
             </div>
 
-            <div class="input-part">
+            <div class="input-part ms-1">
               <label for="year">YEAR</label>
               <input type="number" name="year" id="year" class="form-control" placeholder="YYYY">
-              <div class="error-message d-none">
-                Please enter a valid year.
+              <div class="error-msg error-msg-style">
+
+              </div>
+              <div id="val-error-year" class="error-msg-style">
+                Must be a valid year
               </div>
             </div>
 
-            <div class="button-holder">
-              <div class="btn show-result" id="show-result">
-                <img src="./assets/images/icon-arrow.svg" alt="submit">
-              </div>
-              <div class="line"></div>
-            </div>
           </form>
+          <div class="button-holder">
+            <div class="btn show-result" id="show-result">
+              <img src="./assets/images/icon-arrow.svg" alt="submit">
+            </div>
+            <div class="line"></div>
+          </div>
         </div>
         <div class="card-output">
           <h1><span id="yearR">--</span> Years</h1>
