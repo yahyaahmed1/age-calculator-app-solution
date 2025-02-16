@@ -15,7 +15,31 @@ body {
   border-radius: 15px 15px 100px 15px;
   width: auto;
   max-width: 575px;
-  margin: 115px auto 25px;
+  margin: auto;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.error-msg-style {
+  margin-top: 5px;
+  color: hsl(0, 100%, 67%);
+  font-size: 11px;
+}
+
+#val-error-day,
+#val-error-month,
+#val-error-year {
+  display: none;
+}
+
+#input-form.error .input-part label {
+  color: hsl(0, 100%, 67%);
+}
+
+#input-form.error .input-part input {
+  border-color: hsl(0, 100%, 67%);
 }
 
 .input-part {
@@ -44,7 +68,7 @@ label {
 .card-input input {
   display: inline;
   width: fit-content;
-  max-width: 115px;
+  max-width: 125px;
   font-size: 24px;
   margin-right: 5px;
   font-weight: 600;
@@ -68,7 +92,7 @@ div.show-result {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  margin: 0 0 0 auto;
+  margin: 20px 0 0 auto;
   position: relative;
   z-index: 10;
   justify-content: center;
@@ -85,15 +109,22 @@ div.show-result {
   z-index: 5;
 }
 
-div.show-result:hover {
-  background-color: hsl(0, 0%, 8%);
+div.show-result:hover,
+div.show-result:active {
+  background-color: hsl(0, 0%, 8%) !important;
 }
 
 .card-output h1 {
   width: fit-content;
-  font-size: 46px;
+  font-size: 58px;
   font-weight: bold;
+  font-style: italic;
   color: hsl(0, 0%, 8%);
+}
+@media (max-width: 574px) {
+  .card-output h1 {
+    font-size: 38px;
+  }
 }
 
 .card-output h1 span {

@@ -18,9 +18,33 @@ body {
 	border-radius: 15px 15px 100px 15px;
 	width: auto;
 	max-width: 575px;
-	margin: 115px auto 25px;
+	margin: auto;
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	transform: translate(50%, -50%);
 }
 
+.error-msg-style {
+	margin-top: 5px;
+	color: $Light-red;
+	font-size: 11px;
+}
+
+#val-error-day,
+#val-error-month,
+#val-error-year {
+	display: none;
+}
+
+
+#input-form.error .input-part label {
+	color: $Light-red;
+}
+
+#input-form.error .input-part input {
+	border-color: $Light-red;
+}
 
 .input-part {
 	display: inline-block;
@@ -48,7 +72,7 @@ label {
 .card-input input {
 	display: inline;
 	width: fit-content;
-	max-width: 115px;
+	max-width: 125px;
 	font-size: 24px;
 	margin-right: 5px;
 	font-weight: 600;
@@ -72,7 +96,7 @@ div.show-result {
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
-	margin: 0 0 0 auto;
+	margin: 20px 0 0 auto;
 	position: relative;
 	z-index: 10;
 	justify-content: center;
@@ -90,15 +114,21 @@ div.show-result {
 }
 
 
-div.show-result:hover {
-	background-color: $Off-black;
+div.show-result:hover,
+div.show-result:active {
+	background-color: $Off-black !important;
 }
 
 .card-output h1 {
 	width: fit-content;
-	font-size: 46px;
+	font-size: 58px;
 	font-weight: bold;
+	font-style: italic;
 	color: $Off-black;
+
+	@media (max-width: 574px) {
+		font-size: 38px;
+	}
 }
 
 .card-output h1 span {
