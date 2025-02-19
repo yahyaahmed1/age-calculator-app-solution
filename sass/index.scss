@@ -29,6 +29,11 @@ body {
 	margin-top: 5px;
 	color: $Light-red;
 	font-size: 11px;
+
+	@media (max-width: 426px) {
+		font-size: 7px;
+
+	}
 }
 
 #val-error-day,

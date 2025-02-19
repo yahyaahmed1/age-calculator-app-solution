@@ -27,6 +27,11 @@ body {
   color: hsl(0, 100%, 67%);
   font-size: 11px;
 }
+@media (max-width: 426px) {
+  .error-msg-style {
+    font-size: 7px;
+  }
+}
 
 #val-error-day,
 #val-error-month,
